@@ -7,129 +7,130 @@
 </head>
 
 <body>
-    <header>
-        <div>
-            <div>
-                <a href="/">PINK</a>
-                <a href="#">Меню</a>
-            </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Информация</a>
-                    </li>
-                    <li>
-                        <a href="#">Возможности</a>
-                    </li>
-                    <li>
-                        <a href="#">Отзывы</a>
-                    </li>
-                    <li>
-                        <a href="#">Стоимость</a>
-                    </li>
-                </ul>
-            </nav>
+    <header class="main_page_header">
+        <div class="main_page_header__menu_container">
+            <a class="main_page_header__logo" href="/">PINK</a>
+            <a class="main_page_header__main_menu_button" href="#">Меню</a>
         </div>
+        <nav class="main_menu">
+            <li class="main_menu__item">
+                <a class="main_menu__link" href="#">Информация</a>
+            </li>
+            <li class="main_menu__item">
+                <a class="main_menu__link" href="#">Возможности</a>
+            </li>
+            <li class="main_menu__item">
+                <a class="main_menu__link" href="#">Отзывы</a>
+            </li>
+            <li class="main_menu__item">
+                <a class="main_menu__link" href="#">Стоимость</a>
+            </li>
+        </nav>
     </header>
+
     <main>
-        <section>
-            <div>Взгляните на жизнь иначе!</div>
-            <img src="http://placehold.it/320x313" alt="Мобильник">
+        <section class="promo">
+            <div class="promo__slogan">Взгляните на жизнь иначе!</div>
+            <img class="promo__img" src="http://placehold.it/320x313" alt="Мобильник">
         </section>
 
 
-        <section>
-            <a href="#">Скачать приложение</a>
-            <div>
-                <a href="#" title="apple">apple</a>
-                <a href="#" title="android">android</a>
-                <a href="#" title="windows phone">windows phone</a>
+        <section class="application">
+            <a class="application__button" href="#">Скачать приложение</a>
+            <div class="application__platform_selector">
+                <a class="application__link application__link--apple" href="#" title="apple">apple</a>
+                <a class="application__link application__link--android" href="#" title="android">android</a>
+                <a class="application__link application__link--win" href="#" title="windows phone">windows phone</a>
             </div>
-            <div>Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</div>
+            <div class="application__desc">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</div>
         </section>
 
 
-        <section>
-            <div>
+        <section class="features">
+            <div class="features__slogan">
                 Устали от серости мегаполиса?
                 <br>Нам есть, что вам предложить!
             </div>
-            <div>
-                <p>Поднимает настроение</p>
-                <span>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несоклько кликов!</span>
+            <div class="feature">
+                <p class="feature__title">Поднимает настроение</p>
+                <span class="feature__desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несоклько кликов!</span>
             </div>
-            <div>
-                <p>Меняет мир вокруг</p>
-                <span>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</span>
+            <div class="feauture">
+                <p class="feature__title">Меняет мир вокруг</p>
+                <span class="feature__desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</span>
             </div>
-            <div>
-                <p>Заводит новых друзей</p>
-                <span>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</span>
+            <div class="feature">
+                <p class="feature__title">Заводит новых друзей</p>
+                <span class="feature__desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</span>
             </div>
-            <img src="" alt="Приложение">
+            <img class="features__promo_img" src="" alt="Приложение">
         </section>
 
-        <section>
-            <article>
-                <p>Николай Петров</p>
-                <span>"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я 
-                познакомился со своей будущей женой в комментариях к выложенной фотографии!"</span>
-            </article>
-            <ul>
-                <li>
-                    <a href=""></a>
+        <section class="slider_frame">
+            <div class="slider_frame__body">
+                <article class="review">
+                    <p class="review__name">Николай Петров</p>
+                    <span class="review__text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я 
+                    познакомился со своей будущей женой в комментариях к выложенной фотографии!"</span>
+                </article>
+            </div>
+            <ul class="slider_frame__switch">
+                <li class="slider_frame__switch_item">
+                    <a class="slider_frame__switch_button slider_frame__switch_button--active" href=""></a>
                 </li>
-                <li>
-                    <a href=""></a>
+                <li class="slider_frame__switch_item">
+                    <a class="slider_frame__switch_button" href=""></a>
                 </li>
-                <li>
-                    <a href=""></a>
+                <li class="slider_frame__switch_item">
+                    <a class="slider_frame__switch_button" href=""></a>
                 </li>
             </ul>
         </section>
 
-        <section>
-            <div>
-                <div>
-                    <img src="http://placehold.it/74x74" alt="">
-                    <span>Стандарт</span>
-                    <span>3,99 USD</span>
+        <section class="slider_frame">
+            <div class="slider_frame__body">
+            <div class="price">
+                <div class="price__header">
+                    <img class="price__hit_img" src="http://placehold.it/74x74" alt="">
+                    <span class="price__name">Стандарт</span>
+                    <span class="price__cost">3,99 USD</span>
                 </div>
-                <ul>
-                    <li>Розовый фильтр</li>
-                    <li>Смайлики</li>
-                    <li>Комментарии</li>
+                <ul class="price__features">
+                    <li class="price__feature">Розовый фильтр</li>
+                    <li class="price__feature">Смайлики</li>
+                    <li class="price__feature--off">Комментарии</li>
                 </ul>
             </div>
-            <ul>
-                <li>
-                    <a href=""></a>
+            </div>
+            <ul class="slider_frame__switch">
+                <li class="slider_frame__switch_item">
+                    <a class="slider_frame__switch_button slider_frame__switch_button--active" href=""></a>
                 </li>
-                <li>
-                    <a href=""></a>
+                <li class="slider_frame__switch_item">
+                    <a class="slider_frame__switch_button" href=""></a>
                 </li>
-                <li>
-                    <a href=""></a>
+                <li class="slider_frame__switch_item">
+                    <a class="slider_frame__switch_button" href=""></a>
                 </li>
             </ul>
         </section>
 
-        <section>
-            <div>Остались вопросы?
+        <section class="contacts">
+            <div class="contacts__slogan">Остались вопросы?
                 <br>Свяжитесь с нами!</div>
-            <div>
-                <p>Звоните:</p>
-                <span>8 (800) 1000 900</span>
+            <div class="contact">
+                <p class="contact__title">Звоните:</p>
+                <span class="contact__addr">8 (800) 1000 900</span>
             </div>
-            <div>
-                <p>Пишите:</p>
-                <span>hello@pinkapp.ru</span>
+            <div class="contact">
+                <p class="contact__title">Пишите:</p>
+                <span class="contact__addr">hello@pinkapp.ru</span>
             </div>
-            <div>
-                <p>Приезжайте в гости:</p>
-                <span>Санкт-Петербург, Невский проспект, д.20</span>
+            <div class="contact">
+                <p class="contact__title">Приезжайте в гости:</p>
+                <span class="contact__addr">Санкт-Петербург, Невский проспект, д.20</span>
             </div>
-            <img src="http://placehold.it/320x250" alt="">
+            <img class="contacts__map" src="http://placehold.it/320x250" alt="">
         </section>
     </main>
     <footer></footer>
