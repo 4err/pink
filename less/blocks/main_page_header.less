@@ -1,0 +1,38 @@
+.main_page_header {
+    width: 320px;
+    height: 460px;
+    background: url("@{img_url}/main_page_header_back.png") 0 0 no-repeat;
+    &__menu_container {
+        padding: 20px;
+        background: fadeout(@black, 60%);
+    }
+    &__menu_container--menu_open {
+        background: @blue;
+
+    }
+    &__logo {
+        width: 75px;
+        height: 25px;
+        display: inline-block;
+        background: url("@{img_url}/logo.png") 0 0 no-repeat;
+    }
+    &__main_menu_button {
+        width: 50px;
+        height: 25px;
+        display: inline-block;
+        float: right;
+        background: url("@{img_url}/open_menu_btn.png") 0 0 no-repeat;
+    }
+    &__main_menu_button--close {
+        background: url("@{img_url}/close_menu_btn.png") 0 0 no-repeat;
+    }
+    &__slogan {
+        padding: 0px 30px;
+        margin-top: 25px;
+        font-size: 24px;
+        font-weight: 300;
+        text-align: center;
+        color: @white;
+
+    }
+}

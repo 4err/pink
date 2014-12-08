@@ -1,0 +1,41 @@
+.application {
+    background: darken(@blue, 10%);
+    padding: 30px 20px;
+    color: @white;
+
+    &__button {
+        display: block;
+        padding: 15px 40px;
+        text-align: center;
+        font-size: 18px;
+        border: 3px solid@white;
+        border-radius: 30px;
+    }
+    &__platform_selector {
+        display: flex;
+        margin: 20px 0px;
+        justify-content: space-around;
+    }
+    &__link {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        &--apple {
+            background-image: url("@{img_url}/apple.svg");
+        }
+        &--android {
+            background-image: url("@{img_url}/android.svg");
+        }
+        &--win {
+            background-image: url("@{img_url}/wp.svg");
+        }
+    }
+    
+    &__desc{
+        font-weight: 300;
+        text-align: center;
+    }
+}

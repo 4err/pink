@@ -1,0 +1,40 @@
+.features {
+    background-color: #f2f2f2;
+    &__slogan {
+        padding: 50px;
+        color: @blue;
+
+font-size: 24px;
+        font-weight: 300;
+        text-align: center;
+        background: @white;
+
+    }
+    .feature {
+        padding: 25px;
+        text-align: center;
+        &__title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        &__desc {
+            font-weight: 300;
+        }
+        /*здесь будет угловая фиговина*/
+        &::before {
+            content: "";
+            display: block;
+            background: #123;
+        }
+    }
+    &__promo_container {
+        width: 157px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        height: 280px;
+    }
+    &__promo_img {
+        position: absolute;
+    }
+}
