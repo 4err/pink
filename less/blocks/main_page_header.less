@@ -1,14 +1,15 @@
 .main_page_header {
     width: 320px;
     height: 460px;
-    background: url("@{img_url}/background-1@1x.jpg") 0 0 no-repeat;
+    background: url("@{img_url}/iphone-hand-1.png") 0 bottom no-repeat,
+                            url("@{img_url}/background-1@1x.jpg") 0 0 no-repeat;
     &__menu_container {
         padding: 20px;
         background: fadeout(@black, 60%);
     }
     &__menu_container--menu_open {
-        background: @blue;
-
+        background: @blue_menu;
+        border-bottom:1px solid @black;
     }
     &__logo {
         width: 75px;
@@ -21,10 +22,13 @@
         height: 25px;
         display: inline-block;
         float: right;
-        background: url("@{img_url}/open_menu_btn.png") 0 0 no-repeat;
+        background: url("@{img_url}/menu-burger.svg") 0 0 no-repeat;
     }
     &__main_menu_button--close {
-        background: url("@{img_url}/close_menu_btn.png") 0 0 no-repeat;
+        background: url("@{img_url}/menu-cross.svg") 0 0 no-repeat;
+    }
+    &__main_menu_button--hidden {
+        display: none;
     }
     &__slogan {
         padding: 0px 30px;

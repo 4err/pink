@@ -1,1 +1,27 @@
-.main_menu {}
+.main_menu {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: @mobile_width;
+    &__item {
+        text-align: center;
+        background:@blue_menu;
+    }
+    &__link {
+        display: block;
+         padding: 20px;
+        border-bottom:1px solid @black;
+        border-top:1px solid @menu_shadow;
+        
+        font-size: @big_size;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    &--hidden {
+        display: none;
+    }
+}
