@@ -3,15 +3,16 @@
     overflow: hidden;
 
 &__slogan {
-        padding: 50px;
+        padding: (50px/@mobile_width)*100%;
         color: @blue;
         font-size: @very_big_size;
         font-weight: 300;
         text-align: center;
         background: @white;
     }
+    
     .feature {
-        padding: 25px;
+        padding: (25px/@mobile_width)*100%;
         text-align: center;
         &__title {
             font-size: @big_size;
@@ -21,6 +22,7 @@
             font-weight: 300;
         }
     }
+    
     &__promo_container {
         width: 157px;
         margin: 0 auto;

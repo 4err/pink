@@ -6,12 +6,15 @@ html {
     font-family: 'Open Sans', sans-serif;
     font-size: @base_size;
     max-width: @mobile_width;
+    
+    @media screen and (min-width: 330px) {
+       max-width: @tablet_width;
+    }
 
 }
 a {
     color: @white;
-
-text-decoration: none;
+    text-decoration: none;
 }
 
 .gradient {
@@ -23,3 +26,4 @@ text-decoration: none;
             background: @gray;
             transform: rotate(-6deg) translate(0px, -20px);
         }
+

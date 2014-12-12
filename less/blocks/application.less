@@ -1,22 +1,23 @@
 .application {
     background: darken(@blue, 10%);
-    padding: 30px 20px;
+    padding: (30px/@mobile_width)*100% (20px/@mobile_width)*100%;
     color: @white;
 
 &__button {
         display: block;
-        padding: 15px 40px;
+        padding: (15px/@mobile_width)*100% (40px/@mobile_width)*100%;
         text-align: center;
         font-size: @big_size;
         border: 3px solid@white;
-
-border-radius: 30px;
-    }
+        border-radius: 30px;
+}
+    
     &__platform_selector {
         display: flex;
-        margin: 20px 0px;
+        margin: (20px/@mobile_width)*100% 0px;
         justify-content: space-around;
     }
+    
     &__link {
         font-size: 0;
         display: inline-block;
@@ -35,6 +36,7 @@ border-radius: 30px;
             background-image: url("@{img_url}/microsoft-logo.svg");
         }
     }
+    
     &__desc {
         font-weight: 300;
         text-align: center;
