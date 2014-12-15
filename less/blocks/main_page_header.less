@@ -1,0 +1,44 @@
+.main_page_header {
+    width: 320px;
+    height: 460px;
+    background: url("@{img_url}/iphone-hand-1.png") 0 bottom no-repeat,
+                            url("@{img_url}/background-1@1x.jpg") 0 0 no-repeat;
+    &__menu_container {
+        padding: 20px;
+        background: fadeout(@black, 60%);
+    }
+    &__menu_container--menu_open {
+        background: @blue_menu;
+        border-bottom:1px solid @black;
+    }
+    &__logo {
+        width: 75px;
+        height: 25px;
+        display: inline-block;
+        background: url("@{img_url}/pink-logo-1.png") 0 0 no-repeat;
+    }
+    &__main_menu_button {
+        width: 50px;
+        height: 25px;
+        display: inline-block;
+        float: right;
+        background: url("@{img_url}/menu-burger.svg") 0 0 no-repeat;
+    }
+    &__main_menu_button--close {
+        background: url("@{img_url}/menu-cross.svg") 0 0 no-repeat;
+    }
+    &__main_menu_button--hidden {
+        display: none;
+    }
+    &__slogan {
+        padding: 0px 30px;
+        margin-top: 25px;
+        font-size: @very_big_size;
+        font-weight: 300;
+        text-align: center;
+        color: @white;
+    }
+    &__promo {
+        margin-top: 15px;
+    }
+}

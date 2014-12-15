@@ -1,0 +1,26 @@
+.slider_frame {
+    &__body {} &__switch {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        list-style: none;
+        &_item {
+            margin: 0 10px;
+        }
+        &_button {
+            display: block;
+            width: 6px;
+            height: 6px;
+            background: fadeout(@black, 70%);
+            border-radius: 50%;
+            border: 3px solid@white;
+
+&--active {
+                border: 3px solid@black;
+
+background: @white;
+
+            }
+        }
+    }
+}

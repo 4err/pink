@@ -1,0 +1,35 @@
+.features {
+    background-color: @gray;
+    overflow: hidden;
+
+&__slogan {
+        padding: 50px;
+        color: @blue;
+        font-size: @very_big_size;
+        font-weight: 300;
+        text-align: center;
+        background: @white;
+    }
+    .feature {
+        position: relative;
+        padding: 25px;
+        text-align: center;
+        &__title {
+            font-size: @big_size;
+            font-weight: 700;
+        }
+        &__desc {
+            font-weight: 300;
+        }
+    }
+    &__promo_container {
+        width: 157px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        height: 280px;
+    }
+    &__promo_img {
+        position: absolute;
+    }
+}
