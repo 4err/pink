@@ -5,13 +5,18 @@
     right: 0;
     max-width: @mobile_width;
     
+    @media screen and (min-width: 330px) {
+              max-width: @tablet_width;
+    }
+    
     &__menu_container {
         padding: (20px/@mobile_width)*100%;
         background: fadeout(@black, 60%);
         
-      /*  @media screen and (min-width: 330px) {
-             padding: (20px/@tablet_width)*100%;        
-        }*/
+        @media screen and (min-width: 330px) {
+               padding: (20px/@tablet_width)*100%;
+    }
+        
     }
     &__menu_container--menu_open {
         background: @blue_menu;
@@ -23,12 +28,12 @@
         display: inline-block;
         background: url("@{img_url}/pink-logo-1.png") 0 0 no-repeat;
         
-//        @media screen and (min-width: 330px) {
-//            width: 175px;
-//            height: 40px;
-//               background: url("@{img_url}/glasses-simple@1x.png") 0 0 no-repeat,
-//                   url("@{img_url}/pink-logo-1.png") 75px bottom no-repeat;            
-//        }
+        @media screen and (min-width: 330px) {
+            width: 175px;
+            height: 40px;
+               background: url("@{img_url}/glasses-simple@1x.png") 0 0 no-repeat,
+                   url("@{img_url}/pink-logo-1.png") 75px bottom no-repeat;            
+        }
     }
     &__main_menu_button {
         width: 50px;
