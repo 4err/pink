@@ -1,16 +1,31 @@
 .application {
-    background: darken(@blue, 10%);
-    padding: (30px/@mobile_width)*100% (20px/@mobile_width)*100%;
-    color: @white;
+    padding-top: 80px;
+    background: url("@{img_url}/iphone-hand-1.png") 0 200px no-repeat,
+                            url("@{img_url}/background-1@1x.jpg") -200px 0 no-repeat;
 
-&__button {
+    &__button {
         display: block;
         padding: (15px/@mobile_width)*100% (40px/@mobile_width)*100%;
         text-align: center;
         font-size: @big_size;
         border: 3px solid@white;
         border-radius: 30px;
-}
+    }    
+    &__slogan {
+        padding: 0px (30px/@mobile_width)*100%;
+        margin-top: (25px/@mobile_width)*100%;
+        font-size: @very_big_size;
+        font-weight: 300;
+        text-align: center;
+        color: @white;
+    }
+    
+    &__download_block{
+            margin-top: 310px;
+            background: darken(@blue, 10%);
+            padding: (30px/@mobile_width)*100% (20px/@mobile_width)*100%;
+            color: @white;
+    }
     
     &__platform_selector {
         display: flex;
