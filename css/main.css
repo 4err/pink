@@ -51,7 +51,7 @@ a {
 }
 @media screen and (min-width: 330px) {
   .main_page_header__menu_container {
-    padding: 2.85714286%;
+    padding: 4.28571429%;
   }
 }
 .main_page_header__menu_container--menu_open {
@@ -85,8 +85,13 @@ a {
   display: none;
 }
 .application {
-  padding-top: 80px;
+  padding-top: 25%;
   background: url("../../img/iphone-hand-1.png") 0 200px no-repeat, url("../../img/background-1@1x.jpg") -200px 0 no-repeat;
+}
+@media screen and (min-width: 330px) {
+  .application {
+    background: url("../../img/iphone-hand-2@1x.png") 0 180px no-repeat, url("../../img/background-2@1x.jpg") -250px 0 no-repeat;
+  }
 }
 .application__button {
   display: block;
@@ -96,6 +101,11 @@ a {
   border: 3px solid #ffffff;
   border-radius: 30px;
 }
+@media screen and (min-width: 330px) {
+  .application__button {
+    padding: 3.57142857%;
+  }
+}
 .application__slogan {
   padding: 0px 9.375%;
   margin-top: 7.8125%;
@@ -104,11 +114,26 @@ a {
   text-align: center;
   color: #ffffff;
 }
+@media screen and (min-width: 330px) {
+  .application__slogan {
+    font-size: 40px;
+    width: 32.85714286%;
+    margin-top: 0%;
+  }
+}
 .application__download_block {
   margin-top: 310px;
   background: #151d25;
   padding: 9.375% 6.25%;
   color: #ffffff;
+}
+@media screen and (min-width: 330px) {
+  .application__download_block {
+    font-size: 18px;
+    width: 42.85714286%;
+    margin-top: 0%;
+    background: none;
+  }
 }
 .application__platform_selector {
   display: -webkit-flex;
