@@ -7,7 +7,7 @@ html {
     font-size: @base_size;
     max-width: @mobile_width;
     
-    @media screen and (min-width: 330px) {
+    @media screen and (min-width: @tablet_width) {
        max-width: @tablet_width;
     }
     
@@ -17,15 +17,22 @@ a {
     text-decoration: none;
 }
 
-.gradient::before {
-content: '';
-width: 105%;
-display: block;
-background: #f2f2f2;
-transform: rotate(-6deg) translate(0px, -20px);
-position: absolute;
-top: 0;
-left: 0;
-height: 40px;
+.gradient::after {
+    content: '';
+    width: 105%;
+    display: block;
+    background: #f2f2f2;
+    transform: rotate(-6deg) translate(-15px, 130px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:40px;
+    z-index: 1;
+    
+    @media screen and (min-width: @tablet_width) {
+        height:80px;
+       transform: rotate(-5deg)  translate(-15px, 160px);
+    }
+    
 }
 

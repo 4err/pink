@@ -3,7 +3,7 @@
     background: url("@{img_url}/iphone-hand-1.png") 0 200px no-repeat,
                             url("@{img_url}/background-1@1x.jpg") -200px 0 no-repeat;
     
-     @media screen and (min-width: 330px) {     
+     @media screen and (min-width: @tablet_width) {     
                background:url("@{img_url}/iphone-hand-2@1x.png") 0 180px no-repeat,
                                       url("@{img_url}/background-2@1x.jpg") -250px 0 no-repeat;
         }
@@ -16,7 +16,7 @@
         border: 3px solid@white;
         border-radius: 30px;
         
-        @media screen and (min-width: 330px) {
+        @media screen and (min-width: @tablet_width) {
             padding: (25px/@tablet_width)*100%;
         }
     }    
@@ -28,7 +28,7 @@
         text-align: center;
         color: @white;
         
-         @media screen and (min-width: 330px) {     
+         @media screen and (min-width: @tablet_width) {     
              font-size: @gigant;
              width:(230px/@tablet_width)*100%;
              margin-top: (0px/@tablet_width)*100%;
@@ -42,7 +42,7 @@
             padding: (30px/@mobile_width)*100% (20px/@mobile_width)*100%;
             color: @white;
         
-        @media screen and (min-width: 330px) {     
+        @media screen and (min-width: @tablet_width) {     
              font-size: @big_size;
              width:(300px/@tablet_width)*100%;
              margin-top: (0px/@tablet_width)*100%;

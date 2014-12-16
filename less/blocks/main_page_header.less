@@ -5,7 +5,7 @@
     right: 0;
     max-width: @mobile_width;
     
-    @media screen and (min-width: 330px) {
+    @media screen and (min-width: @tablet_width) {
               max-width: @tablet_width;
     }
     
@@ -13,7 +13,7 @@
         padding: (20px/@mobile_width)*100%;
         background: fadeout(@black, 60%);
         
-        @media screen and (min-width: 330px) {
+        @media screen and (min-width: @tablet_width) {
                padding: (30px/@tablet_width)*100%;
         }
         
@@ -28,7 +28,7 @@
         display: inline-block;
         background: url("@{img_url}/pink-logo-1.png") 0 0 no-repeat;
         
-        @media screen and (min-width: 330px) {
+        @media screen and (min-width:@tablet_width) {
             width: 175px;
             height: 40px;
                background: url("@{img_url}/glasses-simple@1x.png") 0 0 no-repeat,

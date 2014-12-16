@@ -7,7 +7,7 @@ html {
   font-size: 14px;
   max-width: 320px;
 }
-@media screen and (min-width: 330px) {
+@media screen and (min-width: 700px) {
   body,
   html {
     max-width: 700px;
@@ -17,18 +17,27 @@ a {
   color: #ffffff;
   text-decoration: none;
 }
-.gradient::before {
+.gradient::after {
   content: '';
   width: 105%;
   display: block;
   background: #f2f2f2;
-  -webkit-transform: rotate(-6deg) translate(0px, -20px);
-      -ms-transform: rotate(-6deg) translate(0px, -20px);
-          transform: rotate(-6deg) translate(0px, -20px);
+  -webkit-transform: rotate(-6deg) translate(-15px, 130px);
+      -ms-transform: rotate(-6deg) translate(-15px, 130px);
+          transform: rotate(-6deg) translate(-15px, 130px);
   position: absolute;
   top: 0;
   left: 0;
   height: 40px;
+  z-index: 1;
+}
+@media screen and (min-width: 700px) {
+  .gradient::after {
+    height: 80px;
+    -webkit-transform: rotate(-5deg) translate(-15px, 160px);
+        -ms-transform: rotate(-5deg) translate(-15px, 160px);
+            transform: rotate(-5deg) translate(-15px, 160px);
+  }
 }
 /*colors*/
 /*width*/
@@ -40,7 +49,7 @@ a {
   right: 0;
   max-width: 320px;
 }
-@media screen and (min-width: 330px) {
+@media screen and (min-width: 700px) {
   .main_page_header {
     max-width: 700px;
   }
@@ -49,7 +58,7 @@ a {
   padding: 6.25%;
   background: rgba(0, 0, 0, 0.4);
 }
-@media screen and (min-width: 330px) {
+@media screen and (min-width: 700px) {
   .main_page_header__menu_container {
     padding: 4.28571429%;
   }
@@ -64,7 +73,7 @@ a {
   display: inline-block;
   background: url("../../img/pink-logo-1.png") 0 0 no-repeat;
 }
-@media screen and (min-width: 330px) {
+@media screen and (min-width: 700px) {
   .main_page_header__logo {
     width: 175px;
     height: 40px;
@@ -88,7 +97,7 @@ a {
   padding-top: 25%;
   background: url("../../img/iphone-hand-1.png") 0 200px no-repeat, url("../../img/background-1@1x.jpg") -200px 0 no-repeat;
 }
-@media screen and (min-width: 330px) {
+@media screen and (min-width: 700px) {
   .application {
     background: url("../../img/iphone-hand-2@1x.png") 0 180px no-repeat, url("../../img/background-2@1x.jpg") -250px 0 no-repeat;
   }
@@ -101,7 +110,7 @@ a {
   border: 3px solid #ffffff;
   border-radius: 30px;
 }
-@media screen and (min-width: 330px) {
+@media screen and (min-width: 700px) {
   .application__button {
     padding: 3.57142857%;
   }
@@ -114,7 +123,7 @@ a {
   text-align: center;
   color: #ffffff;
 }
-@media screen and (min-width: 330px) {
+@media screen and (min-width: 700px) {
   .application__slogan {
     font-size: 40px;
     width: 32.85714286%;
@@ -127,7 +136,7 @@ a {
   padding: 9.375% 6.25%;
   color: #ffffff;
 }
-@media screen and (min-width: 330px) {
+@media screen and (min-width: 700px) {
   .application__download_block {
     font-size: 18px;
     width: 42.85714286%;
@@ -171,12 +180,41 @@ a {
   overflow: hidden;
 }
 .features__slogan {
-  padding: 15.625%;
+  padding: 7.8125%;
   color: #283645;
   font-size: 24px;
   font-weight: 300;
   text-align: center;
   background: #ffffff;
+  position: relative;
+}
+@media screen and (min-width: 700px) {
+  .features__slogan {
+    font-size: 40px;
+    padding: 7.14285714%;
+    padding-bottom: 0px;
+  }
+}
+.features__slogan--short {
+  padding-bottom: 18.75%;
+}
+@media screen and (min-width: 700px) {
+  .features__slogan--short {
+    padding: 0 21.42857143%;
+    padding-bottom: 14.28571429%;
+  }
+}
+.features__block {
+  position: relative;
+}
+@media screen and (min-width: 700px) {
+  .features__block {
+    padding: 3.57142857%;
+    padding-bottom: 0;
+    width: 320px;
+    float: right;
+    text-align: left;
+  }
 }
 .features .feature {
   position: relative;
@@ -188,17 +226,20 @@ a {
   font-weight: 700;
 }
 .features .feature__desc {
+  line-height: 24px;
   font-weight: 300;
 }
-.features__promo_container {
-  width: 157px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  height: 280px;
+@media screen and (min-width: 700px) {
+  .features .feature {
+    padding: 3.57142857%;
+    text-align: left;
+  }
 }
 .features__promo_img {
-  position: absolute;
+  position: relative;
+  margin-left: 20px;
+  background: none;
+  z-index: 2;
 }
 .review {
   padding: 4.6875%;
@@ -212,7 +253,7 @@ a {
 .review__text {
   color: #283645;
   font-weight: 400;
-  line-height: 9.375%;
+  line-height: 30px;
   text-align: center;
 }
 .slider_frame__switch {
@@ -290,4 +331,12 @@ a {
 }
 .main_menu--hidden {
   display: none;
+}
+.ads {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .ads {
+    display: block;
+  }
 }

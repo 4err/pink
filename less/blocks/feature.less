@@ -3,35 +3,65 @@
     overflow: hidden;
 
 &__slogan {
-        padding: (50px/@mobile_width)*100%;
+        padding: (25px/@mobile_width)*100%;
         color: @blue;
         font-size: @very_big_size;
         font-weight: 300;
         text-align: center;
         background: @white;
+        position: relative;
+    
+        @media screen and (min-width: @tablet_width) {     
+            font-size: @gigant;
+            padding: (50px/@tablet_width)*100%;
+            padding-bottom: 0px;
+        }
+        
+        &--short{
+            padding-bottom:  (60px/@mobile_width)*100%;
+            @media screen and (min-width: @tablet_width) {
+                padding: 0 (150px/@tablet_width)*100%;
+                padding-bottom: (100px/@tablet_width)*100%;
+                
+            }
+        }
+    }
+    
+    &__block{
+        position: relative;
+        @media screen and (min-width: @tablet_width) {
+            padding: (25px/@tablet_width)*100%;
+            padding-bottom: 0;
+            width: 320px;
+            float: right;
+            text-align: left;
+         }
     }
     
     .feature {
         position: relative;
         padding: (25px/@mobile_width)*100%;
         text-align: center;
+        
         &__title {
             font-size: @big_size;
             font-weight: 700;
         }
         &__desc {
+            line-height: 24px;
             font-weight: 300;
         }
+        
+        @media screen and (min-width: @tablet_width) {
+            padding: (25px/@tablet_width)*100%;
+            text-align: left;
+         }
     }
     
-    &__promo_container {
-        width: 157px;
-        margin: 0 auto;
-        overflow: hidden;
-        position: relative;
-        height: 280px;
-    }
     &__promo_img {
-        position: absolute;
+        position: relative;
+        margin-left: 20px;
+        background: none;
+        z-index: 2;
     }
 }
