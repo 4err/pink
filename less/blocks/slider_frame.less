@@ -1,5 +1,6 @@
 .slider_frame {
-    &__body {} &__switch {
+    &__body {} 
+    &__switch {
         display: flex;
         justify-content: center;
         align-content: center;
@@ -19,6 +20,11 @@
              border: 3px solid@black;
              background: @white;
 
+            }
+        }
+        &--price {
+            @media screen and (min-width: @tablet_width) {
+                display: none;
             }
         }
     }
