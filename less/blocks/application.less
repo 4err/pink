@@ -8,7 +8,8 @@
                                       url("@{img_url}/background-2@1x.jpg") -250px 0 no-repeat;
     }
     
-    @media screen and (min-width: @pc_width) {     
+    @media screen and (min-width: @pc_width) {   
+        padding: 0;
         padding-top: (280px/@pc_width)*100%;
         background: url("@{img_url}/iphone-hand-3@1x.png") 100% 100% no-repeat,
                                       url("@{img_url}/background-3@1x.jpg") 0 100% no-repeat;
@@ -49,7 +50,8 @@
         @media screen and (min-width: @pc_width) {     
             font-size: @gigant;
             width:(230px/@pc_width)*100%;
-            padding: (30px/@pc_width)*100% (140px/@pc_width)*100%;
+            padding: (0px/@pc_width)*100% (160px/@pc_width)*100%;
+           // margin-top: (-50px/@pc_width)*100%;
         }
         
     }
@@ -68,8 +70,8 @@
         }
         @media screen and (min-width: @pc_width) {
             width:(300px/@pc_width)*100%;
-            padding: (30px/@pc_width)*100% (100px/@pc_width)*100%;
-            margin-bottom: (200px/@pc_width)*100%;          
+            padding: (30px/@pc_width)*100% (130px/@pc_width)*100%;
+            padding-bottom: (130px/@pc_width)*100%;          
             
         }
     }
@@ -78,6 +80,10 @@
         display: flex;
         margin: (20px/@mobile_width)*100% 0px;
         justify-content: space-around;
+        @media screen and (min-width: @pc_width) {
+            padding:  (100px/@pc_width)*100%;      
+            
+        }
     }
     
     &__link {
@@ -88,6 +94,7 @@
         background-size: auto;
         background-repeat: no-repeat;
         background-position: center;
+        
         &--apple {
             background-image: url("@{img_url}/apple-logo.svg");
         }

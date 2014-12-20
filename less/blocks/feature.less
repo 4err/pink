@@ -24,6 +24,10 @@
                 padding-bottom: (100px/@tablet_width)*100%;
                 
             }
+            @media screen and (min-width: @pc_width) {
+                padding-bottom: (100px/@pc_width)*100%;
+                
+            }
         }
     }
     
@@ -34,7 +38,14 @@
             padding-bottom: 0;
             width: 320px;
             float: right;
-            text-align: left;
+         }
+        @media screen and (min-width: @pc_width) {
+            width: 100%;
+            padding: 0;
+            float:none;
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
          }
     }
     

@@ -141,6 +141,7 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .application {
+    padding: 0;
     padding-top: 23.33333333%;
     background: url("../../img/iphone-hand-3@1x.png") 100% 100% no-repeat, url("../../img/background-3@1x.jpg") 0 100% no-repeat;
   }
@@ -184,7 +185,7 @@ a {
   .application__slogan {
     font-size: 40px;
     width: 19.16666667%;
-    padding: 2.5% 11.66666667%;
+    padding: 0% 13.33333333%;
   }
 }
 .application__download_block {
@@ -204,8 +205,8 @@ a {
 @media screen and (min-width: 1200px) {
   .application__download_block {
     width: 25%;
-    padding: 2.5% 8.33333333%;
-    margin-bottom: 16.66666667%;
+    padding: 2.5% 10.83333333%;
+    padding-bottom: 10.83333333%;
   }
 }
 .application__platform_selector {
@@ -216,6 +217,11 @@ a {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+}
+@media screen and (min-width: 1200px) {
+  .application__platform_selector {
+    padding: 8.33333333%;
+  }
 }
 .application__link {
   font-size: 0;
@@ -268,6 +274,11 @@ a {
     padding-bottom: 14.28571429%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .features__slogan--short {
+    padding-bottom: 8.33333333%;
+  }
+}
 .features__block {
   position: relative;
 }
@@ -277,7 +288,22 @@ a {
     padding-bottom: 0;
     width: 320px;
     float: right;
-    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__block {
+    width: 100%;
+    padding: 0;
+    float: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-content: space-between;
+        -ms-flex-line-pack: justify;
+            align-content: space-between;
   }
 }
 .features .feature {
