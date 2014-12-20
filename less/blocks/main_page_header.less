@@ -8,13 +8,19 @@
     @media screen and (min-width: @tablet_width) {
               max-width: @tablet_width;
     }
-    
+    @media screen and (min-width: @pc_width) {
+              max-width: @pc_width;
+    }
     &__menu_container {
         padding: (20px/@mobile_width)*100%;
         background: fadeout(@black, 60%);
         
         @media screen and (min-width: @tablet_width) {
                padding: (30px/@tablet_width)*100%;
+        }
+        
+        @media screen and (min-width: @pc_width) {
+               padding: (30px/@pc_width)*100%;
         }
         
     }
@@ -31,8 +37,11 @@
         @media screen and (min-width:@tablet_width) {
             width: 175px;
             height: 40px;
-               background: url("@{img_url}/glasses-simple@1x.png") 0 0 no-repeat,
-                   url("@{img_url}/pink-logo-1.png") 75px bottom no-repeat;            
+            background: url("@{img_url}/Pink-logo-2@1x.png") 0 0 no-repeat;     
+        }
+        
+        @media screen and (min-width: @pc_width) {
+              background: url("@{img_url}/Pink-logo-3@1x.png") 0 0 no-repeat;
         }
     }
     &__main_menu_button {
@@ -41,9 +50,16 @@
         display: inline-block;
         float: right;
         background: url("@{img_url}/menu-burger.svg") 0 0 no-repeat;
+        
+        @media screen and (min-width: @pc_width) {
+               display: none;
+        }
     }
     &__main_menu_button--close {
         background: url("@{img_url}/menu-cross.svg") 0 0 no-repeat;
+        @media screen and (min-width: @pc_width) {
+               display: none;
+        }
     }
     &__main_menu_button--hidden {
         display: none;

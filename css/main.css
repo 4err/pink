@@ -14,6 +14,12 @@ html {
     max-width: 700px;
   }
 }
+@media screen and (min-width: 1200px) {
+  body,
+  html {
+    max-width: 1200px;
+  }
+}
 a {
   color: #ffffff;
   text-decoration: none;
@@ -60,6 +66,11 @@ a {
     max-width: 700px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .main_page_header {
+    max-width: 1200px;
+  }
+}
 .main_page_header__menu_container {
   padding: 6.25%;
   background: rgba(0, 0, 0, 0.4);
@@ -67,6 +78,11 @@ a {
 @media screen and (min-width: 700px) {
   .main_page_header__menu_container {
     padding: 4.28571429%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main_page_header__menu_container {
+    padding: 2.5%;
   }
 }
 .main_page_header__menu_container--menu_open {
@@ -83,7 +99,12 @@ a {
   .main_page_header__logo {
     width: 175px;
     height: 40px;
-    background: url("../../img/glasses-simple@1x.png") 0 0 no-repeat, url("../../img/pink-logo-1.png") 75px bottom no-repeat;
+    background: url("../../img/Pink-logo-2@1x.png") 0 0 no-repeat;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main_page_header__logo {
+    background: url("../../img/Pink-logo-3@1x.png") 0 0 no-repeat;
   }
 }
 .main_page_header__main_menu_button {
@@ -93,8 +114,18 @@ a {
   float: right;
   background: url("../../img/menu-burger.svg") 0 0 no-repeat;
 }
+@media screen and (min-width: 1200px) {
+  .main_page_header__main_menu_button {
+    display: none;
+  }
+}
 .main_page_header__main_menu_button--close {
   background: url("../../img/menu-cross.svg") 0 0 no-repeat;
+}
+@media screen and (min-width: 1200px) {
+  .main_page_header__main_menu_button--close {
+    display: none;
+  }
 }
 .main_page_header__main_menu_button--hidden {
   display: none;
@@ -105,7 +136,13 @@ a {
 }
 @media screen and (min-width: 700px) {
   .application {
-    background: url("../../img/iphone-hand-2@1x.png") 0 180px no-repeat, url("../../img/background-2@1x.jpg") -250px 0 no-repeat;
+    background: url("../../img/iphone-hand-2@1x.png") 0 100% no-repeat, url("../../img/background-2@1x.jpg") -250px 0 no-repeat;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .application {
+    padding-top: 23.33333333%;
+    background: url("../../img/iphone-hand-3@1x.png") 100% 100% no-repeat, url("../../img/background-3@1x.jpg") 0 100% no-repeat;
   }
 }
 .application__button {
@@ -119,6 +156,13 @@ a {
 @media screen and (min-width: 700px) {
   .application__button {
     padding: 3.57142857%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .application__button {
+    padding: 3.33333333%;
+    font-size: 21px;
+    font-weight: 700;
   }
 }
 .application__slogan {
@@ -136,6 +180,13 @@ a {
     margin-top: 0%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .application__slogan {
+    font-size: 40px;
+    width: 19.16666667%;
+    padding: 2.5% 11.66666667%;
+  }
+}
 .application__download_block {
   margin-top: 310px;
   background: #151d25;
@@ -148,6 +199,13 @@ a {
     width: 42.85714286%;
     margin-top: 0%;
     background: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .application__download_block {
+    width: 25%;
+    padding: 2.5% 8.33333333%;
+    margin-bottom: 16.66666667%;
   }
 }
 .application__platform_selector {
@@ -406,9 +464,31 @@ a {
           flex-direction: column;
   width: 320px;
 }
+@media screen and (min-width: 700px) {
+  .main_menu {
+    width: 700px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main_menu {
+    width: 1200px;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: -60px;
+  }
+}
 .main_menu__item {
   text-align: center;
   background: #233343;
+}
+@media screen and (min-width: 1200px) {
+  .main_menu__item {
+    background: none;
+  }
 }
 .main_menu__link {
   display: block;
@@ -419,8 +499,18 @@ a {
   font-weight: 700;
   text-transform: uppercase;
 }
-.main_menu--hidden {
-  display: none;
+@media screen and (min-width: 1200px) {
+  .main_menu__link {
+    padding: 0 50px;
+    font-weight: 400;
+    text-transform: none;
+    border: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .main_menu--hidden {
+    display: none;
+  }
 }
 .ads {
   display: none;
@@ -473,3 +563,5 @@ a {
         height: 40px;
         width: 145px;*/
 }
+
+/*# sourceMappingURL=main.css.map */
