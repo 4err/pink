@@ -1,0 +1,47 @@
+.price {
+    background: @gray;
+    
+    &__table {
+        margin: 0 auto;
+        
+            border-collapse: collapse;
+        
+        & td {
+            background: @white;
+            padding: 10px 20px;
+            color:@blue;
+            font-size: @big_size;
+            font-weight: 400;
+            text-align: left;
+            border: 2px solid #e5e5e5;
+        }
+        
+        & td:not(:first-child) {
+            font-size: 0;
+        }
+        
+        
+        & th {
+            background: @blue;
+            padding:20px 50px;
+            color: @white;
+            font-size: @big_size;
+            font-weight: 700;
+            text-align: center;
+            border-right: 2px solid #e5e5e5;
+            text-transform: uppercase;
+        }
+        
+        
+        & th:first-child{
+            background: @gray;
+        }
+    }
+    
+    &__cost {
+        display: block;
+        font-size: @very_big_size;
+        font-weight: 300;
+            
+    }
+}

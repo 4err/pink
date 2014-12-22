@@ -728,5 +728,42 @@ a {
     display: none;
   }
 }
+.price {
+  background: #f2f2f2;
+}
+.price__table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.price__table td {
+  background: #ffffff;
+  padding: 10px 20px;
+  color: #283645;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  border: 2px solid #e5e5e5;
+}
+.price__table td:not(:first-child) {
+  font-size: 0;
+}
+.price__table th {
+  background: #283645;
+  padding: 20px 50px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  border-right: 2px solid #e5e5e5;
+  text-transform: uppercase;
+}
+.price__table th:first-child {
+  background: #f2f2f2;
+}
+.price__cost {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+}
 
 /*# sourceMappingURL=main.css.map */
