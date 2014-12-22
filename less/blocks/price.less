@@ -1,14 +1,40 @@
 .price {
     background: @gray;
+    padding: 80px 0;
+    overflow: hidden;
+    
+    &__icon {
+        position: absolute;
+        width: 30px;
+        height: 25px;
+        top: 30%;
+        left: 50% - 10px;
+        
+        &--yes {
+            background: url("@{img_url}/yes.svg") 0 0 no-repeat;
+        }
+        
+        &--no {
+            background: url("@{img_url}/no.svg") 0 0 no-repeat;
+        }
+        @media screen and (min-width: @mobile_width ) and (max-width: @tablet_width )        {
+            left: 100% - 15px;
+            
+        }
+    }
     
     &__table {
         margin: 0 auto;
+        border-collapse: collapse;
         
-            border-collapse: collapse;
-        
+        & th:first-child{
+            background: @gray;
+        }
+
         & td {
+            position: relative;
             background: @white;
-            padding: 10px 20px;
+            padding: 15px 40px;
             color:@blue;
             font-size: @big_size;
             font-weight: 400;
@@ -22,8 +48,9 @@
         
         
         & th {
+            position: relative;
             background: @blue;
-            padding:20px 50px;
+            padding:20px 70px;
             color: @white;
             font-size: @big_size;
             font-weight: 700;
@@ -31,17 +58,52 @@
             border-right: 2px solid #e5e5e5;
             text-transform: uppercase;
         }
-        
-        
-        & th:first-child{
-            background: @gray;
+        @media screen and (min-width: @tablet_width ) and (max-width: @pc_width ) {
+            & th {
+                font-size: @big_size - 2px;
+                padding:10px 40px;
+                
+            }
+            & td {
+                font-size: @base_size;  
+                padding: 15px 20px;
+            }
         }
+        @media screen and (min-width: @mobile_width ) and (max-width: @tablet_width )        {
+            margin-left: -350px;
+            & td:not(:first-child) {
+                font-size: @base_size;
+            }
+            & td:not(:nth-child(3)), & th:not(:nth-child(3)) {
+               // display: none;
+            }
+            & td {
+               text-align: left;
+               text-transform: uppercase;
+               padding: 20px;
+            }
+            
+        }
+        
     }
     
     &__cost {
         display: block;
         font-size: @very_big_size;
         font-weight: 300;
+        
+        @media screen and (min-width: @tablet_width ) {
+           font-size: @big_size;
+        }
             
+    }
+    &__hit::before {
+        content: "";
+        position: absolute;
+        width: 61px;
+        height: 61px;
+        left: 0;
+        top: 0;
+        background:url("@{img_url}/hit.png") 0 0 no-repeat;
     }
 }

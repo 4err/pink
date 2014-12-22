@@ -135,48 +135,38 @@
                     </li>
                 </ul>
             </section>
-
+            </div>
             <section class="slider_frame">
                 <div class="slider_frame__body">
                     <div class="price">
-<!--
-                        <div class="price__header">
-                            <span class="price__name">Стандарт</span>
-                            <span class="price__cost">3,99 USD</span>
-                        </div>
-                        <ul class="price__features">
-                            <li class="price__feature">Розовый фильтр</li>
-                            <li class="price__feature">Смайлики</li>
-                            <li class="price__feature--off">Комментарии</li>
-                        </ul>
-                        
--->
+                    <div class="layout_center_wrapper">
                    <table class="price__table">
                        <tr>
                            <th></th>
                            <th>База <span class="price__cost">1,99 USD</span></th>
-                           <th>Стандарт <span class="price__cost">3,99 USD</span></th>
+                           <th class="price__hit">Стандарт <span class="price__cost">3,99 USD</span></th>
                            <th>Анлим <span class="price__cost">9,99 USD</span></th>
                        </tr>
                        <tr>
                            <td>Розовый фильтр </td>
-                           <td>Розовый фильтр <span class="price--yes"></span></td>
-                           <td>Розовый фильтр <span class="price--no"></span></td>
-                           <td>Розовый фильтр <span class="price--no"></span></td>
+                           <td>Розовый фильтр <span class="price__icon price__icon--yes"></span></td>
+                           <td>Розовый фильтр <span class="price__icon price__icon--yes"></span></td>
+                           <td>Розовый фильтр <span class="price__icon price__icon--yes"></span></td>
                        </tr>
                        <tr>
                            <td>Смайлики</td>
-                           <td>Смайлики <span class="price--yes"></span></td>
-                           <td>Смайлики <span class="price--yes"></span></td>
-                           <td>Смайлики <span class="price--no"></span></td>
+                           <td>Смайлики <span class="price__icon price__icon--no"></span></td>
+                           <td>Смайлики <span class="price__icon price__icon--yes"></span></td>
+                           <td>Смайлики <span class="price__icon price__icon--yes"></span></td>
                        </tr>
                        <tr>
                            <td>Комментарии</td>
-                           <td>Комментарии <span class="price--yes"></span></td>
-                           <td>Комментарии <span class="price--yes"></span></td>
-                           <td>Комментарии <span class="price--yes"></span></td>
+                           <td>Комментарии <span class="price__icon price__icon--no"></span></td>
+                           <td>Комментарии <span class="price__icon price__icon--no"></span></td>
+                           <td>Комментарии <span class="price__icon price__icon--yes"></span></td>
                        </tr>
                    </table>
+                    </div>
                     </div>
                 </div>
                 <ul class="slider_frame__switch slider_frame__switch--price">
@@ -191,11 +181,12 @@
                     </li>
                 </ul>
             </section>
-
+            <div class="layout_center_wrapper">
             <section class="contacts">
                 <div class="contacts__slogan">
                     Остались вопросы?
                     <br>Свяжитесь с нами!</div>
+                    
                 <div class="contact">
                     <p class="contact__title">Звоните:</p>
                     <div class="contact__addr">8 (800) 1000 900</div>
@@ -208,14 +199,18 @@
                     <p class="contact__title">Приезжайте в гости:</p>
                     <div class="contact__addr">Санкт-Петербург, Невский проспект, д.20</div>
                 </div>
-                <img src="img/map.png" class="contacts__map">
+               <picture>
+                   <source media="(min-width: 1200px)" srcset="/img/map3.png 1x">
+                   <source media="(min-width: 700px)" srcset="/img/map2.png 1x">
+                       <img class="contacts__map" src="/img/map1.png" alt="Карта">
+              </picture>
             </section>
         </div>
     </main>
     <footer class="main_page_footer">
         <div class="layout_center_wrapper">
             <a href="#" class="main_page_footer__logo">
-                <img src="/img/Pink-logo-footer-2@1x.png" alt="123">
+                <img srcset="/img/Pink-logo-footer-2@1x.png, /img/Pink-logo-footer-3@1x.png" alt="123">
             </a>
             <a href="" class="main_page_footer__twitter">
                 <img src="/img/twitter.svg" alt="123">

@@ -1,36 +1,65 @@
 .contacts {
     position: relative;
+    overflow: hidden;
     
     &__slogan{
         color: @blue;
         font-size: @very_big_size;
         text-align: center;
+        font-weight: 300;
         
         @media screen and (min-width: @tablet_width) {
             font-size: @gigant;    
             margin-bottom: 20px;
         }
+        
+        @media screen and (min-width: @pc_width) {
+            font-size: @gigant + 10px;    
+            margin-bottom: 20px;
+        }
     }
     
-    &__map {
-       
-    }
-    @media screen and (min-width: @tablet_width) {        
+    @media screen and (min-width: @mobile_width) {        
         &::after {
             content: "";
             position: absolute;
             left: 0;  
-            bottom: -60px;
+            bottom: 33px;
             width: 0px;
             height: 0px;
-            border: 350px solid transparent;	border-top: 100px solid @white;
+            border: 160px solid transparent;	
+            border-top: 50px solid @white;
             z-index: 1;
         }
     }
+    @media screen and (min-width: @tablet_width) {        
+        &::after {
+            bottom: -60px;
+            border: 350px solid transparent;	
+            border-top: 100px solid @white;
+        }
+    }
+    @media screen and (min-width: @pc_width) {        
+        &::after {
+            bottom: -335px;
+            border: 600px solid transparent;	
+            border-top: 123px solid @white;
+        }
+    }
+    
+    &__map {
+        margin-top: 20px;
+        
+    }
+    
         
 }
 
+
 .contact {
+    
+    padding:0 (20px/@mobile_width)*100%;
+    
     @media screen and (min-width: @tablet_width) {    
         &:nth-child(2){
             position: absolute;
@@ -41,15 +70,25 @@
             right: 50px;
         }
         &:nth-child(4){    
-        margin: 0 auto;
-        margin-top: 150px;
-        margin-bottom: 20px;
-        width: 270px;
+            margin: 0 auto;
+            margin-top: 150px;
+            margin-bottom: 20px;
+            width: 270px;
         }
         
         font-weight: 300;
     }
-    padding:0 (20px/@mobile_width)*100%;
+    
+     @media screen and (min-width: @pc_width) {    
+        &:nth-child(4){    
+            
+            margin: 0 auto;
+            margin-top: 38px;
+            margin-bottom: 20px;
+            width: 270px;
+        }
+    }
+        
         
     &__title {
         color: @blue;

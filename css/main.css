@@ -487,11 +487,13 @@ a {
 }
 .contacts {
   position: relative;
+  overflow: hidden;
 }
 .contacts__slogan {
   color: #283645;
   font-size: 24px;
   text-align: center;
+  font-weight: 300;
 }
 @media screen and (min-width: 700px) {
   .contacts__slogan {
@@ -499,18 +501,41 @@ a {
     margin-bottom: 20px;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1200px) {
+  .contacts__slogan {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 320px) {
   .contacts::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -60px;
+    bottom: 33px;
     width: 0px;
     height: 0px;
-    border: 350px solid transparent;
-    border-top: 100px solid #ffffff;
+    border: 160px solid transparent;
+    border-top: 50px solid #ffffff;
     z-index: 1;
   }
+}
+@media screen and (min-width: 700px) {
+  .contacts::after {
+    bottom: -60px;
+    border: 350px solid transparent;
+    border-top: 100px solid #ffffff;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts::after {
+    bottom: -335px;
+    border: 600px solid transparent;
+    border-top: 123px solid #ffffff;
+  }
+}
+.contacts__map {
+  margin-top: 20px;
 }
 .contact {
   padding: 0 6.25%;
@@ -530,6 +555,14 @@ a {
   .contact:nth-child(4) {
     margin: 0 auto;
     margin-top: 150px;
+    margin-bottom: 20px;
+    width: 270px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact:nth-child(4) {
+    margin: 0 auto;
+    margin-top: 38px;
     margin-bottom: 20px;
     width: 270px;
   }
@@ -730,14 +763,38 @@ a {
 }
 .price {
   background: #f2f2f2;
+  padding: 80px 0;
+  overflow: hidden;
+}
+.price__icon {
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  top: 30%;
+  left: 40%;
+}
+.price__icon--yes {
+  background: url("../../img/yes.svg") 0 0 no-repeat;
+}
+.price__icon--no {
+  background: url("../../img/no.svg") 0 0 no-repeat;
+}
+@media screen and (min-width: 320px) and (max-width: 700px) {
+  .price__icon {
+    left: 85%;
+  }
 }
 .price__table {
   margin: 0 auto;
   border-collapse: collapse;
 }
+.price__table th:first-child {
+  background: #f2f2f2;
+}
 .price__table td {
+  position: relative;
   background: #ffffff;
-  padding: 10px 20px;
+  padding: 15px 40px;
   color: #283645;
   font-size: 18px;
   font-weight: 400;
@@ -748,8 +805,9 @@ a {
   font-size: 0;
 }
 .price__table th {
+  position: relative;
   background: #283645;
-  padding: 20px 50px;
+  padding: 20px 70px;
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
@@ -757,13 +815,47 @@ a {
   border-right: 2px solid #e5e5e5;
   text-transform: uppercase;
 }
-.price__table th:first-child {
-  background: #f2f2f2;
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+  .price__table th {
+    font-size: 16px;
+    padding: 10px 40px;
+  }
+  .price__table td {
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 700px) {
+  .price__table {
+    margin-left: -350px;
+  }
+  .price__table td:not(:first-child) {
+    font-size: 14px;
+  }
+  .price__table td {
+    text-align: left;
+    text-transform: uppercase;
+    padding: 20px;
+  }
 }
 .price__cost {
   display: block;
   font-size: 24px;
   font-weight: 300;
+}
+@media screen and (min-width: 700px) {
+  .price__cost {
+    font-size: 18px;
+  }
+}
+.price__hit::before {
+  content: "";
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  left: 0;
+  top: 0;
+  background: url("../../img/hit.png") 0 0 no-repeat;
 }
 
 /*# sourceMappingURL=main.css.map */
