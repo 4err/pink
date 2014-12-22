@@ -44,7 +44,7 @@
             padding: 0;
             float:none;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-content: space-between;
          }
     }
@@ -68,15 +68,31 @@
         &__title {
             font-size: @big_size;
             font-weight: 700;
+            
+            @media screen and (min-width: @pc_width) {
+                font-size: @mini-gigant;
+             }
+            
         }
         &__desc {
             line-height: 24px;
             font-weight: 300;
+            
+            @media screen and (min-width: @pc_width) {
+                font-weight: 400;
+                font-size: @big_size;
+             }
         }
         
         @media screen and (min-width: @tablet_width) {
             padding: (25px/@tablet_width)*100%;
             text-align: left;
+         }
+        
+        @media screen and (min-width: @pc_width) {
+            padding: (25px/@pc_width)*100%;
+            width: 230px;
+            text-align: center;
          }
     }
     
@@ -89,7 +105,6 @@
     
     &__promo_img {
         position: relative;
-        margin-left: 20px;
         background: none;
         z-index: 2;
         
