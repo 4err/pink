@@ -13,6 +13,11 @@
         height: 300px;
         background: url("@{img_url}/timer-2.svg") 0 0 no-repeat; 
         
+        @media screen and (min-width: @pc_width) {
+                background: url("@{img_url}/timer-3.svg") 0 0 no-repeat;                 
+        }
+        
+        
         &_num {
             position: absolute;
             top: 70px;
@@ -27,6 +32,10 @@
             color: @pink;
             font-weight: 700;
             font-size: 120px;
+            
+            @media screen and (min-width: @pc_width) {
+                                 
+            }
             
         }
     }

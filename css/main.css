@@ -573,6 +573,11 @@ a {
   height: 300px;
   background: url("../../img/timer-2.svg") 0 0 no-repeat;
 }
+@media screen and (min-width: 1200px) {
+  .ads__timer {
+    background: url("../../img/timer-3.svg") 0 0 no-repeat;
+  }
+}
 .ads__timer_num {
   position: absolute;
   top: 70px;
