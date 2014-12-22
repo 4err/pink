@@ -370,6 +370,15 @@ a {
             flex-direction: column-reverse;
   }
 }
+@media screen and (min-width: 1200px) {
+  .review::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background: url("../../img/quotes.svg") 0 0 no-repeat;
+    margin: 0 auto;
+  }
+}
 .review__name {
   font-size: 18px;
   font-weight: 700;
@@ -389,6 +398,12 @@ a {
     font-size: 18px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .review__text {
+    width: 660px;
+    margin: 0 auto;
+  }
+}
 .review__profession {
   display: none;
 }
@@ -401,6 +416,9 @@ a {
         -ms-flex-order: -1;
             order: -1;
   }
+}
+.slider_frame__body {
+  position: relative;
 }
 .slider_frame__switch {
   display: -webkit-flex;
@@ -433,6 +451,39 @@ a {
   .slider_frame__switch--price {
     display: none;
   }
+}
+@media screen and (min-width: 1200px) {
+  .slider_frame__switch--review {
+    display: none;
+  }
+}
+.slider_frame__arrow {
+  display: block;
+  position: absolute;
+  top: 40%;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #bec2c6;
+  border-bottom: none;
+  border-right: none;
+  font-size: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+@media screen and (max-width: 1200px) {
+  .slider_frame__arrow {
+    display: none;
+  }
+}
+.slider_frame__arrow--left {
+  left: 100px;
+}
+.slider_frame__arrow--right {
+  right: 100px;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 .contacts {
   position: relative;
@@ -558,18 +609,25 @@ a {
 }
 .ads {
   display: none;
-  padding: 30px;
 }
 @media screen and (min-width: 700px) {
   .ads {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {
   .ads {
     background: #f2f2f2;
+  }
+}
+.ads__wrap {
+  padding: 50px;
+}
+@media screen and (min-width: 700px) {
+  .ads__wrap {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 .ads__timer {
@@ -581,6 +639,7 @@ a {
 @media screen and (min-width: 1200px) {
   .ads__timer {
     background: url("../../img/timer-3.svg") 0 0 no-repeat;
+    margin-right: 100px;
   }
 }
 .ads__timer_num {
@@ -617,17 +676,38 @@ a {
   line-height: 36px;
   width: 200px;
 }
+@media screen and (min-width: 1200px) {
+  .ads__title {
+    width: 500px;
+    padding-bottom: 20px;
+  }
+}
 .ads__text {
   color: #283645;
   font-weight: 400;
   line-height: 24px;
   width: 300px;
 }
+@media screen and (min-width: 1200px) {
+  .ads__text {
+    width: 500px;
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+}
 .ads__link {
   display: block;
   margin-top: 10px;
   color: #d22856;
   text-decoration: underline;
+  font-weight: 400;
+}
+@media screen and (min-width: 1200px) {
+  .ads__link {
+    width: 500px;
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
 }
 .main_page_footer {
   position: relative;

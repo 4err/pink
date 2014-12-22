@@ -1,5 +1,7 @@
 .slider_frame {
-    &__body {} 
+    &__body {
+        position: relative;
+    } 
     &__switch {
         display: flex;
         justify-content: center;
@@ -26,6 +28,40 @@
             @media screen and (min-width: @tablet_width) {
                 display: none;
             }
+        }
+        
+        &--review {
+            @media screen and (min-width: @pc_width) {
+                display: none;
+            }
+        }
+    }
+    
+    &__arrow {
+        display: block;
+        position: absolute;
+        top: 40%;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #bec2c6;
+        border-bottom: none;
+        border-right: none;
+        font-size: 0;
+        transform: rotate(-45deg);
+        
+        
+        
+        @media screen and (max-width: @pc_width) {
+            display: none;
+        }
+        
+        &--left{            
+            left: 100px;
+        }
+        
+        &--right{            
+            right: 100px;
+            transform: rotate(135deg);
         }
     }
 }

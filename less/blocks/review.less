@@ -9,7 +9,19 @@
     justify-content: flex-start;
     
     @media screen and (min-width: @tablet_width) {
-                flex-direction: column-reverse;              
+        flex-direction: column-reverse;              
+    }
+    
+    @media screen and (min-width: @pc_width) {
+        &::after {
+            content: "";
+            //position: absolute;
+            width: 80px;
+            height: 80px;
+            background: url("@{img_url}/quotes.svg") 0 0 no-repeat;
+            margin: 0 auto;
+            
+        }         
     }
     
     &__name {
@@ -17,7 +29,7 @@
         font-weight: 700;        
         
         @media screen and (min-width: @tablet_width) {
-               font-size: @big_size+2;    
+            font-size: @big_size+2;    
             margin-bottom: 0;
         }
         
@@ -29,6 +41,11 @@
         
          @media screen and (min-width: @tablet_width) {
                font-size: @big_size;          
+        }
+        
+        @media screen and (min-width: @pc_width) {
+            width: 660px;
+            margin: 0 auto;
         }
     }
     
