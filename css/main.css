@@ -567,10 +567,15 @@ a {
     display: flex;
   }
 }
+@media screen and (min-width: 1200px) {
+  .ads {
+    background: #f2f2f2;
+  }
+}
 .ads__timer {
   position: relative;
-  width: 270px;
-  height: 300px;
+  width: 300px;
+  height: 350px;
   background: url("../../img/timer-2.svg") 0 0 no-repeat;
 }
 @media screen and (min-width: 1200px) {
@@ -592,6 +597,14 @@ a {
   color: #d22856;
   font-weight: 700;
   font-size: 120px;
+}
+@media screen and (min-width: 1200px) {
+  .ads__timer_num {
+    top: 80px;
+    left: 30px;
+    width: 210px;
+    height: 210px;
+  }
 }
 .ads__article {
   width: 300px;

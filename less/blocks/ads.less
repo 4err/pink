@@ -6,11 +6,14 @@
     @media screen and (min-width: @tablet_width) {
                 display: flex;                
     }
+    @media screen and (min-width: @pc_width) {
+                background: @gray;         
+        }
     
     &__timer {
         position: relative;
-        width: 270px;
-        height: 300px;
+        width: 300px;
+        height: 350px;
         background: url("@{img_url}/timer-2.svg") 0 0 no-repeat; 
         
         @media screen and (min-width: @pc_width) {
@@ -34,7 +37,10 @@
             font-size: 120px;
             
             @media screen and (min-width: @pc_width) {
-                                 
+                top: 80px;
+                left: 30px;
+                width: 210px;
+                height: 210px;           
             }
             
         }
