@@ -105,7 +105,7 @@ a {
 }
 @media screen and (min-width: 700px) {
   .application {
-    padding-top: 230px;
+    padding-top: 300px;
     background: url("../../img/iphone-hand-2@1x.png") 50% 100% no-repeat, url("../../img/background-2@1x.jpg") 50% 0 no-repeat;
   }
 }
@@ -279,6 +279,19 @@ a {
 .features__demo {
   background-color: #f2f2f2;
 }
+@media screen and (min-width: 1200px) {
+  .features__wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
 .features .feature {
   position: relative;
   padding: 7.8125%;
@@ -298,11 +311,26 @@ a {
     text-align: left;
   }
 }
+@media screen and (min-width: 1200px) {
+  .features__pictures_block {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+}
 .features__promo_img {
   position: relative;
   margin-left: 20px;
   background: none;
   z-index: 2;
+}
+@media screen and (max-width: 1200px) {
+  .features__promo_img--additional {
+    display: none;
+  }
 }
 .review {
   padding: 4.6875%;
@@ -522,8 +550,26 @@ a {
     display: flex;
   }
 }
-.ads__time_img {
-  margin-right: 10px;
+.ads__timer {
+  position: relative;
+  width: 270px;
+  height: 300px;
+  background: url("../../img/timer-2.svg") 0 0 no-repeat;
+}
+.ads__timer_num {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  width: 180px;
+  height: 180px;
+  border: 10px solid #d22856;
+  border-radius: 100%;
+  color: #d22856;
+  font-weight: 700;
+  font-size: 120px;
 }
 .ads__article {
   width: 300px;
@@ -562,7 +608,7 @@ a {
         height: 40px;
         width: 145px;*/
 }
-@media screen and (max-width: 320px - 1) {
+@media screen and (max-width: 700px) {
   .main_page_footer {
     display: none;
   }
