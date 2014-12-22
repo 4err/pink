@@ -1,23 +1,25 @@
 .application {
-    padding-top: (80px/@mobile_width)*100%;
-    background: url("@{img_url}/iphone-hand-1.png") 0 200px no-repeat,
-                            url("@{img_url}/background-1@1x.jpg") -200px 0 no-repeat;
+    padding-top: 100px;
+    background: url("@{img_url}/iphone-hand-1.png") 50% 44% no-repeat,
+                            url("@{img_url}/background-1@1x.jpg") 50% 0 no-repeat;
     
-    @media screen and (min-width: @tablet_width) {     
-               background:url("@{img_url}/iphone-hand-2@1x.png") 0 100% no-repeat,
-                                      url("@{img_url}/background-2@1x.jpg") -250px 0 no-repeat;
+    @media screen and (min-width: @tablet_width) {  
+        padding-top: 230px;
+               background:url("@{img_url}/iphone-hand-2@1x.png")50% 100% no-repeat,
+                                      url("@{img_url}/background-2@1x.jpg") 50% 0 no-repeat;
     }
     
     @media screen and (min-width: @pc_width) {   
         padding: 0;
-        padding-top: (280px/@pc_width)*100%;
-        background: url("@{img_url}/iphone-hand-3@1x.png") 100% 100% no-repeat,
-                                      url("@{img_url}/background-3@1x.jpg") 0 100% no-repeat;
+        padding-top: 280px;
+        background: url("@{img_url}/iphone-hand-3@1x.png") 60% 100% no-repeat,
+                                      url("@{img_url}/background-3@1x.jpg") 50% 100% no-repeat;
     }
 
+    background-color: darken(@blue, 10%);
     &__button {
         display: block;
-        padding: (15px/@mobile_width)*100% (40px/@mobile_width)*100%;
+        padding: 15px 40px;
         text-align: center;
         font-size: @big_size;
         border: 3px solid@white;
@@ -41,7 +43,7 @@
         font-weight: 300;
         text-align: center;
         color: @white;
-        
+        background: transparent;        
         @media screen and (min-width: @tablet_width) {     
              font-size: @gigant;
              width:(230px/@tablet_width)*100%;
@@ -51,15 +53,14 @@
             font-size: @gigant;
             width:(230px/@pc_width)*100%;
             padding: (0px/@pc_width)*100% (160px/@pc_width)*100%;
-           // margin-top: (-50px/@pc_width)*100%;
         }
         
     }
     
     &__download_block{
-            margin-top: 310px;
+            margin-top: 300px;
             background: darken(@blue, 10%);
-            padding: (30px/@mobile_width)*100% (20px/@mobile_width)*100%;
+            padding: 30px 20px;
             color: @white;
         
         @media screen and (min-width: @tablet_width) {     

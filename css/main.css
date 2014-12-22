@@ -5,51 +5,30 @@ html {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  max-width: 320px;
   font-weight: 300;
-}
-@media screen and (min-width: 700px) {
-  body,
-  html {
-    max-width: 700px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  body,
-  html {
-    max-width: 1200px;
-  }
 }
 a {
   color: #ffffff;
   text-decoration: none;
 }
-.gradient::after {
-  content: '';
-  width: 105%;
-  display: block;
-  background: #f2f2f2;
-  -webkit-transform: rotate(-6deg) translate(-15px, 130px);
-      -ms-transform: rotate(-6deg) translate(-15px, 130px);
-          transform: rotate(-6deg) translate(-15px, 130px);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 40px;
-  z-index: 1;
-}
-@media screen and (min-width: 700px) {
-  .gradient::after {
-    height: 80px;
-    -webkit-transform: rotate(-5deg) translate(-15px, 160px);
-        -ms-transform: rotate(-5deg) translate(-15px, 160px);
-            transform: rotate(-5deg) translate(-15px, 160px);
-  }
-}
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
+}
+.layout_center_wrapper {
+  margin: 0 auto;
+  width: 320px;
+}
+@media screen and (min-width: 700px) {
+  .layout_center_wrapper {
+    width: 700px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .layout_center_wrapper {
+    width: 1200px;
+  }
 }
 /*colors*/
 /*width*/
@@ -59,21 +38,10 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  max-width: 320px;
-}
-@media screen and (min-width: 700px) {
-  .main_page_header {
-    max-width: 700px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .main_page_header {
-    max-width: 1200px;
-  }
+  background: rgba(0, 0, 0, 0.4);
 }
 .main_page_header__menu_container {
   padding: 6.25%;
-  background: rgba(0, 0, 0, 0.4);
 }
 @media screen and (min-width: 700px) {
   .main_page_header__menu_container {
@@ -131,24 +99,26 @@ a {
   display: none;
 }
 .application {
-  padding-top: 25%;
-  background: url("../../img/iphone-hand-1.png") 0 200px no-repeat, url("../../img/background-1@1x.jpg") -200px 0 no-repeat;
+  padding-top: 100px;
+  background: url("../../img/iphone-hand-1.png") 50% 44% no-repeat, url("../../img/background-1@1x.jpg") 50% 0 no-repeat;
+  background-color: #151d25;
 }
 @media screen and (min-width: 700px) {
   .application {
-    background: url("../../img/iphone-hand-2@1x.png") 0 100% no-repeat, url("../../img/background-2@1x.jpg") -250px 0 no-repeat;
+    padding-top: 230px;
+    background: url("../../img/iphone-hand-2@1x.png") 50% 100% no-repeat, url("../../img/background-2@1x.jpg") 50% 0 no-repeat;
   }
 }
 @media screen and (min-width: 1200px) {
   .application {
     padding: 0;
-    padding-top: 23.33333333%;
-    background: url("../../img/iphone-hand-3@1x.png") 100% 100% no-repeat, url("../../img/background-3@1x.jpg") 0 100% no-repeat;
+    padding-top: 280px;
+    background: url("../../img/iphone-hand-3@1x.png") 60% 100% no-repeat, url("../../img/background-3@1x.jpg") 50% 100% no-repeat;
   }
 }
 .application__button {
   display: block;
-  padding: 4.6875% 12.5%;
+  padding: 15px 40px;
   text-align: center;
   font-size: 18px;
   border: 3px solid #ffffff;
@@ -173,6 +143,7 @@ a {
   font-weight: 300;
   text-align: center;
   color: #ffffff;
+  background: transparent;
 }
 @media screen and (min-width: 700px) {
   .application__slogan {
@@ -189,9 +160,9 @@ a {
   }
 }
 .application__download_block {
-  margin-top: 310px;
+  margin-top: 300px;
   background: #151d25;
-  padding: 9.375% 6.25%;
+  padding: 30px 20px;
   color: #ffffff;
 }
 @media screen and (min-width: 700px) {
@@ -246,7 +217,6 @@ a {
   text-align: center;
 }
 .features {
-  background-color: #f2f2f2;
   overflow: hidden;
 }
 .features__slogan {
@@ -305,6 +275,9 @@ a {
         -ms-flex-line-pack: justify;
             align-content: space-between;
   }
+}
+.features__demo {
+  background-color: #f2f2f2;
 }
 .features .feature {
   position: relative;
@@ -588,6 +561,11 @@ a {
   /*display: inline-block;
         height: 40px;
         width: 145px;*/
+}
+@media screen and (max-width: 320px - 1) {
+  .main_page_footer {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

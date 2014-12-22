@@ -1,7 +1,4 @@
 .main_page_footer {
-    @media screen and (max-width: @mobile_width - 1) {
-            //display: none;
-    }
     position: relative;
     z-index: 10;
     
@@ -15,5 +12,8 @@
         height: 40px;
         width: 145px;*/
         //background: url("@{img_url}/Pink-logo-footer-2@1x.png") 0 0 no-repeat;
+    }
+    @media screen and (max-width: @mobile_width - 1) {
+            display: none;
     }
 }

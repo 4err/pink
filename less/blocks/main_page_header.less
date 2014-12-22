@@ -3,17 +3,10 @@
     top:0;
     left:0;
     right: 0;
-    max-width: @mobile_width;
-    
-    @media screen and (min-width: @tablet_width) {
-              max-width: @tablet_width;
-    }
-    @media screen and (min-width: @pc_width) {
-              max-width: @pc_width;
-    }
+    background: fadeout(@black, 60%);
     &__menu_container {
         padding: (20px/@mobile_width)*100%;
-        background: fadeout(@black, 60%);
+        //background: fadeout(@black, 60%);
         
         @media screen and (min-width: @tablet_width) {
                padding: (30px/@tablet_width)*100%;
