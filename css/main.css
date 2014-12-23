@@ -887,14 +887,10 @@ a {
 }
 .price__table {
   border-collapse: collapse;
-  margin-left: -275px;
+  margin-left: -570px;
 }
 .price__table th:first-child {
   background: #f2f2f2;
-}
-.price__table td:first-child,
-.price__table th:first-child {
-  display: none;
 }
 .price__table th {
   position: relative;
@@ -922,10 +918,6 @@ a {
 @media screen and (min-width: 700px) {
   .price__table {
     margin: 0 auto;
-  }
-  .price__table td:first-child,
-  .price__table th:first-child {
-    display: block;
   }
   .price__table td:not(:first-child) {
     font-size: 0;

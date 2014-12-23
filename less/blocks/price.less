@@ -24,19 +24,13 @@
     
     &__table {
         border-collapse: collapse;
+        margin-left: -570px;
         
         & th:first-child{
             background: @gray;
         }
-        
-
-            margin-left: -275px;
             
-            & td:first-child,  & th:first-child{
-                display: none;
-            }
-            
-            & th {        
+       & th {        
                 position: relative;
                 background: @blue;
                 padding: 20px 20px;
@@ -46,9 +40,9 @@
                 text-align: center;
                 border-right: 2px solid #e5e5e5;
                 text-transform: uppercase;
-            }
+        }
             
-            & td {
+        & td {
                 position: relative;
                 background: @white;
                 padding: 20px 20px;
@@ -59,16 +53,13 @@
                 text-align: left;
                 border: 2px solid #e5e5e5;
                 text-transform: uppercase;
-            }        
+        }        
         
         
         
         @media screen and (min-width: @tablet_width ) {
             
             margin: 0 auto;
-            & td:first-child,  & th:first-child{
-                display: block;
-            }
             
             & td:not(:first-child) {
                 font-size: 0;
