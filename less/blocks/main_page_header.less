@@ -1,44 +1,75 @@
 .main_page_header {
-    width: 320px;
-    height: 460px;
-    background: url("@{img_url}/iphone-hand-1.png") 0 bottom no-repeat,
-                            url("@{img_url}/background-1@1x.jpg") 0 0 no-repeat;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    background: fadeout(@black, 60%);
+    
     &__menu_container {
-        padding: 20px;
-        background: fadeout(@black, 60%);
+        position: relative;
+        padding: (20px/@mobile_width)*100%;        
+        
+        @media screen and (min-width: @tablet_width) {
+               padding: (30px/@tablet_width)*100%;
+        }
+        
+        @media screen and (min-width: @pc_width) {
+               padding: (30px/@pc_width)*100%;
+        }
+        
     }
+    
     &__menu_container--menu_open {
-        background: @blue_menu;
-        border-bottom:1px solid @black;
+        @media screen and (max-width: @pc_width) {         
+            background: @blue_menu;
+            border-bottom:1px solid @black;
+        }
     }
+    
     &__logo {
         width: 75px;
         height: 25px;
         display: inline-block;
         background: url("@{img_url}/pink-logo-1.png") 0 0 no-repeat;
+        
+        @media screen and (min-width:@tablet_width) {
+            width: 175px;
+            height: 40px;
+            background: url("@{img_url}/Pink-logo-2@1x.png") 0 0 no-repeat;     
+        }
+        
+        @media screen and (min-width: @pc_width) {
+              background: url("@{img_url}/Pink-logo-3@1x.png") 0 0 no-repeat;
+        }
     }
+    
     &__main_menu_button {
+        position: absolute;
+        right: 20px;
         width: 50px;
         height: 25px;
         display: inline-block;
-        float: right;
         background: url("@{img_url}/menu-burger.svg") 0 0 no-repeat;
+        
+        @media screen and (min-width: @pc_width) {
+               display: none;
+        }
+        
+        &--close {
+            width: 25px;
+            background: url("@{img_url}/menu-cross.svg") 0 0 no-repeat;
+        
+            @media screen and (min-width: @pc_width) {
+                   display: none;
+            }
+        }
+        
+        transform: translateY(0);
+        transition: transform 1s ease;
     }
-    &__main_menu_button--close {
-        background: url("@{img_url}/menu-cross.svg") 0 0 no-repeat;
-    }
+    
     &__main_menu_button--hidden {
-        display: none;
+        transform: translateY(-200px);
     }
-    &__slogan {
-        padding: 0px 30px;
-        margin-top: 25px;
-        font-size: @very_big_size;
-        font-weight: 300;
-        text-align: center;
-        color: @white;
-    }
-    &__promo {
-        margin-top: 15px;
-    }
+  
 }

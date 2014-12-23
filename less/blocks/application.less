@@ -1,22 +1,101 @@
 .application {
-    background: darken(@blue, 10%);
-    padding: 30px 20px;
-    color: @white;
+    padding-top: 100px;
+    background: url("@{img_url}/iphone-hand-1.png") 50% 44% no-repeat,
+                            url("@{img_url}/background-1@1x.jpg") 50% 0 no-repeat;
+    
+    @media screen and (min-width: @tablet_width) {  
+        padding-top: 300px;
+               background:url("@{img_url}/iphone-hand-2@1x.png")50% 100% no-repeat,
+                                      url("@{img_url}/background-2@1x.jpg") 50% 0 no-repeat;
+    }
+    
+    @media screen and (min-width: @pc_width) {   
+        padding: 0;
+        padding-top: (280px/@pc_width) * 100%;
+        background: url("@{img_url}/iphone-hand-3@1x.png") 60% 100% no-repeat,
+                                      url("@{img_url}/background-fullsize.jpg") 50% 100% no-repeat;
+        background-size: auto, cover;
+    }
 
-&__button {
+    background-color: darken(@blue, 10%);
+    &__button {
         display: block;
         padding: 15px 40px;
         text-align: center;
         font-size: @big_size;
         border: 3px solid@white;
-
-border-radius: 30px;
+        border-radius: 30px;
+        
+        @media screen and (min-width: @tablet_width) {
+            padding: (25px/@tablet_width)*100%;
+        }
+        
+        @media screen and (min-width: @pc_width) {
+            padding: (40px/@pc_width)*100%;
+            //margin-bottom: (140px/@pc_width)*100%;
+            font-size: @big_size + 3;
+            font-weight: 700;
+        }
+        
+        &:hover {
+            background: @white;
+            color: @pink;
+        }
+        &:active {
+            color: fadeout(@pink, 70);
+        }
+    }    
+    &__slogan {
+        padding: 0px (30px/@mobile_width)*100%;
+        margin-top: (25px/@mobile_width)*100%;
+        font-size: @very_big_size;
+        font-weight: 300;
+        text-align: center;
+        color: @white;
+        background: transparent;        
+        @media screen and (min-width: @tablet_width) {     
+             font-size: @gigant;
+             width:(230px/@tablet_width)*100%;
+             margin-top: (0px/@tablet_width)*100%;
+        }
+        @media screen and (min-width: @pc_width) {     
+            font-size: @gigant;
+            width:(230px/@pc_width)*100%;
+            padding: (0px/@pc_width)*100% (160px/@pc_width)*100%;
+        }
+        
     }
+    
+    &__download_block{
+            margin-top: 300px;
+            background: darken(@blue, 10%);
+            padding: 30px 20px;
+            color: @white;
+        
+        @media screen and (min-width: @tablet_width) {     
+            font-size: @big_size;
+            width:(300px/@tablet_width)*100%;
+            margin-top: (0px/@tablet_width)*100%;
+            background: none;
+        }
+        @media screen and (min-width: @pc_width) {
+            width:(300px/@pc_width)*100%;
+            padding: (30px/@pc_width)*100% (130px/@pc_width)*100%;
+            padding-bottom: (130px/@pc_width)*100%;          
+            
+        }
+    }
+    
     &__platform_selector {
         display: flex;
-        margin: 20px 0px;
+        margin: (20px/@mobile_width)*100% 0px;
         justify-content: space-around;
+        @media screen and (min-width: @pc_width) {
+            padding:  (100px/@pc_width)*100%;      
+            
+        }
     }
+    
     &__link {
         font-size: 0;
         display: inline-block;
@@ -25,6 +104,7 @@ border-radius: 30px;
         background-size: auto;
         background-repeat: no-repeat;
         background-position: center;
+        
         &--apple {
             background-image: url("@{img_url}/apple-logo.svg");
         }
@@ -35,6 +115,7 @@ border-radius: 30px;
             background-image: url("@{img_url}/microsoft-logo.svg");
         }
     }
+    
     &__desc {
         font-weight: 300;
         text-align: center;

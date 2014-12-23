@@ -1,35 +1,119 @@
 .features {
-    background-color: @gray;
     overflow: hidden;
 
-&__slogan {
-        padding: 50px;
+    &__slogan {
+        padding: (25px/@mobile_width)*100%;
         color: @blue;
         font-size: @very_big_size;
         font-weight: 300;
         text-align: center;
         background: @white;
+        position: relative;
+    
+        @media screen and (min-width: @tablet_width) {     
+            font-size: @gigant;
+            padding: (50px/@tablet_width)*100%;
+            padding-bottom: 0px;
+        }
+        
+        &--short{
+            padding-bottom:  (60px/@mobile_width)*100%;
+            @media screen and (min-width: @tablet_width) {
+                padding: 0 (150px/@tablet_width)*100%;
+                padding-bottom: (100px/@tablet_width)*100%;
+                
+            }
+            @media screen and (min-width: @pc_width) {
+                padding-bottom: (100px/@pc_width)*100%;
+                
+            }
+        }
     }
+    
+    &__block{
+        position: relative;
+        
+        @media screen and (min-width: @tablet_width) {
+            padding: (25px/@tablet_width)*100%;
+            padding-bottom: 0;
+            width: 320px;
+            float: right;
+         }
+        @media screen and (min-width: @pc_width) {
+            width: 100%;
+            padding: 0;
+            float:none;
+            display: flex;
+            justify-content: space-around;
+            align-content: space-between;
+         }
+    }
+    &__demo {        
+        background-color: @gray;
+        position: relative;
+        z-index: 10;
+    }
+    
+    &__wrapper {
+        @media screen and (min-width: @pc_width) {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+         }
+    }
+    
     .feature {
         position: relative;
-        padding: 25px;
+        padding: (25px/@mobile_width)*100%;
         text-align: center;
+        
         &__title {
             font-size: @big_size;
             font-weight: 700;
+            
+            @media screen and (min-width: @pc_width) {
+                font-size: @mini-gigant;
+             }
+            
         }
         &__desc {
+            line-height: 24px;
             font-weight: 300;
+            
+            @media screen and (min-width: @pc_width) {
+                font-weight: 400;
+                font-size: @big_size;
+             }
         }
+        
+        @media screen and (min-width: @tablet_width) {
+            padding: (25px/@tablet_width)*100%;
+            text-align: left;
+         }
+        
+        @media screen and (min-width: @pc_width) {
+            padding: (25px/@pc_width)*100%;
+            width: 230px;
+            text-align: center;
+         }
     }
-    &__promo_container {
-        width: 157px;
-        margin: 0 auto;
-        overflow: hidden;
-        position: relative;
-        height: 280px;
+    
+    &__pictures_block {
+        @media screen and (min-width: @pc_width) {
+            display: flex;
+            justify-content: space-around;
+         }
     }
+    
     &__promo_img {
-        position: absolute;
+        position: relative;
+        background: none;
+        z-index: 2;
+        
+        &--additional {
+            @media screen and (max-width: @pc_width ) {
+                display: none;
+            }
+        }
     }
 }

@@ -1,16 +1,63 @@
 .review {
-    padding: 15px;
+    
+    padding: (15px/@mobile_width)*100%;
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 30px;
+    justify-content: flex-start;
+    
+    @media screen and (min-width: @tablet_width) {
+        flex-direction: column-reverse;              
+    }
+    
+    @media screen and (min-width: @pc_width) {
+        &::after {
+            content: "";
+            width: 80px;
+            height: 80px;
+            background: url("@{img_url}/quotes.svg") 0 0 no-repeat;
+            margin: 0 auto;
+            
+        }         
+    }
+    
     &__name {
         font-size: @big_size;
-        font-weight: 700;
-        line-height: 30px;
-        text-align: center;
+        font-weight: 700;        
+        
+        @media screen and (min-width: @tablet_width) {
+            font-size: @big_size+2;    
+            margin-bottom: 0;
+        }
+        
     }
+    
     &__text {
         color: @blue;
-
-font-weight: 400;
-        line-height: 30px;
-        text-align: center;
+        font-weight: 400;
+        
+         @media screen and (min-width: @tablet_width) {
+               font-size: @big_size;          
+        }
+        
+        @media screen and (min-width: @pc_width) {
+            width: 660px;
+            margin: 0 auto;
+        }
     }
+    
+    &__profession {        
+        display: none;
+        
+        @media screen and (min-width: @tablet_width) {
+            display: block;
+            margin: 0;
+            color: @blue;
+            order: -1;   
+        }
+    
+    }
+    
 }

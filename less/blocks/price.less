@@ -1,0 +1,125 @@
+.price {
+    background: @gray;
+    padding: 80px 0;
+    position: relative;
+    z-index: 10;
+    &__icon {
+        position: absolute;
+        width: 30px;
+        height: 25px;
+        top: 30%;
+        left: 100% - 20px;
+        
+        &--yes {
+            background: url("@{img_url}/yes.svg") 0 0 no-repeat;
+        }
+        
+        &--no {
+            background: url("@{img_url}/no.svg") 0 0 no-repeat;
+        }
+        @media screen and (min-width: @tablet_width ) {            
+            left: 50% - 10px;            
+        }
+    }
+    
+    &__table {
+        border-collapse: collapse;
+        margin-left: -570px;
+            position: relative;
+    z-index: 10;
+        
+        & th:first-child{
+            background: @gray;
+        }
+            
+       & th {        
+                position: relative;
+                background: @blue;
+                padding: 20px 20px;
+                color: @white;
+                font-size: @big_size;
+                font-weight: 700;
+                text-align: center;
+                border-right: 2px solid #e5e5e5;
+                text-transform: uppercase;
+        }
+            
+        & td {
+                position: relative;
+                background: @white;
+                padding: 20px 20px;
+                padding-right: 160px;
+                color:@blue;
+                font-size: @base_size;
+                font-weight: 400;
+                text-align: left;
+                border: 2px solid #e5e5e5;
+                text-transform: uppercase;
+        }        
+        
+        
+        
+        @media screen and (min-width: @tablet_width ) {
+            
+            margin: 0 auto;
+            
+            & td:not(:first-child) {
+                font-size: 0;
+            }
+            
+            & th {
+                font-size: @big_size - 2px;
+                padding:10px 40px;                
+            }
+            & td {
+                font-size: @base_size;  
+                padding: 15px 20px;
+            }
+            
+        }
+        
+        @media screen and (min-width: @pc_width ) {
+            
+            & td {
+                padding: 15px 40px;
+                font-size: @big_size;
+                font-weight: 400;
+            }
+            
+            & th {
+                padding:20px 70px;
+                font-size: @big_size;
+                font-weight: 700;              
+            }
+                        
+        }
+        
+    }
+    
+    &__cost {
+        display: block;
+        
+        @media screen and (min-width: @mobile_width ) {
+            font-size: @very_big_size;
+            font-weight: 300;
+        }
+                
+        @media screen and (min-width: @tablet_width ) {
+           font-size: @big_size;
+        }
+        
+        @media screen and (min-width: @pc_width ) {
+            font-size: @very_big_size;
+        }
+            
+    }
+    &__hit::before {
+        content: "";
+        position: absolute;
+        width: 61px;
+        height: 61px;
+        left: 0;
+        top: 0;
+        background:url("@{img_url}/hit.png") 0 0 no-repeat;
+    }
+}
