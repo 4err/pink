@@ -179,21 +179,21 @@
                             </tr>
                         </table>
                     </div>
-                    
+
                     <ul class="slider_frame__switch slider_frame__switch--price">
-                <li class="slider_frame__switch_item">
-                    <a class="slider_frame__switch_button" href=""></a>
-                </li>
-                <li class="slider_frame__switch_item">
-                    <a class="slider_frame__switch_button slider_frame__switch_button--active" href=""></a>
-                </li>
-                <li class="slider_frame__switch_item">
-                    <a class="slider_frame__switch_button" href=""></a>
-                </li>
-            </ul>
+                        <li class="slider_frame__switch_item">
+                            <a class="slider_frame__switch_button" href=""></a>
+                        </li>
+                        <li class="slider_frame__switch_item">
+                            <a class="slider_frame__switch_button slider_frame__switch_button--active" href=""></a>
+                        </li>
+                        <li class="slider_frame__switch_item">
+                            <a class="slider_frame__switch_button" href=""></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        
+
         </section>
         <div class="layout_center_wrapper">
             <section class="contacts">
@@ -221,23 +221,34 @@
             </section>
         </div>
     </main>
-    <footer class="main_page_footer">
-        <div class="layout_center_wrapper">
+    <div class="layout_center_wrapper">
+        <footer class="main_page_footer">
             <a href="#" class="main_page_footer__logo">
-                <img srcset="/img/Pink-logo-footer-2@1x.png, /img/Pink-logo-footer-3@1x.png" alt="123">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="/img/Pink-logo-footer-3@1x.png 1x, /img/Pink-logo-footer-3@2x.png 2x">
+                        <source media="(min-width: 700px)" srcset="/img/Pink-logo-footer-2@1x.png 1x, /img/Pink-logo-footer-2@2x.png 2x">
+                            <img src="/img/Pink-logo-footer-2@1x.png" alt="На главную">
+                </picture>
             </a>
-            <a href="" class="main_page_footer__twitter">
-                <img src="/img/twitter.svg" alt="123">
-            </a>
-            <a href="" class="main_page_footer__facebook">
-                <img src="/img/facebook.svg" alt="123">
-            </a>
-            <a href="" class="main_page_footer__youtube">
-                <img src="/img/youtube.svg" alt="123">
-            </a>
-            <a href="" class="main_page_footer__123"></a>
-        </div>
-    </footer>
+            <div class="main_page_footer__icons_block">
+                <a href="" class="main_page_footer__icon main_page_footer__icon--twitter">
+                    Twitter
+                </a>
+                <a href="" class="main_page_footer__icon main_page_footer__icon--facebook">
+                    Facebook
+                </a>
+                <a href="" class="main_page_footer__icon main_page_footer__icon--youtube">
+                    Youtube
+                </a>
+            </div>
+            <div class="main_page_footer__copyright_block">
+                Website by 
+                <a href="" class="main_page_footer__design_icon"></a>
+                for
+                <a href="" class="main_page_footer__ha_icon"></a>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

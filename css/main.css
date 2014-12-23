@@ -112,8 +112,9 @@ a {
 @media screen and (min-width: 1200px) {
   .application {
     padding: 0;
-    padding-top: 280px;
-    background: url("../../img/iphone-hand-3@1x.png") 60% 100% no-repeat, url("../../img/background-3@1x.jpg") 50% 100% no-repeat;
+    padding-top: 23.33333333%;
+    background: url("../../img/iphone-hand-3@1x.png") 60% 100% no-repeat, url("../../img/background-fullsize.jpg") 50% 100% no-repeat;
+    background-size: auto, cover;
   }
 }
 .application__button {
@@ -749,12 +750,61 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .main_page_footer__logo {
   color: black
   /*display: inline-block;
         height: 40px;
         width: 145px;*/
+}
+.main_page_footer__icons_block {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+}
+.main_page_footer__icon {
+  font-size: 0px;
+  width: 45px;
+  height: 45px;
+  margin: 0 5px;
+  border: 2px solid #e9eaec;
+  border-radius: 100%;
+}
+.main_page_footer__icon--twitter {
+  background: url("../../img/twitter.svg") center center no-repeat;
+}
+.main_page_footer__icon--facebook {
+  background: url("../../img/facebook.svg") center center no-repeat;
+}
+.main_page_footer__icon--youtube {
+  background: url("../../img/youtube.svg") center center no-repeat;
+}
+.main_page_footer__copyright_block {
+  margin-top: 10px;
+  color: #283645;
+  font-size: 18px;
+  font-weight: 400;
+  vertical-align: top;
+}
+.main_page_footer__design_icon {
+  display: inline-block;
+  margin: 0 5px;
+  width: 30px;
+  height: 35px;
+  background: url("../../img/glukhanko.svg") 0 0 no-repeat;
+}
+.main_page_footer__ha_icon {
+  display: inline-block;
+  margin: 0 5px;
+  width: 30px;
+  height: 35px;
+  background: url("../../img/htmlacademy.svg") 0 0 no-repeat;
 }
 @media screen and (max-width: 700px) {
   .main_page_footer {
