@@ -13,24 +13,41 @@ a {
     text-decoration: none;
 }
 
-//.gradient::after {
-//    content: '';
-//    width: 105%;
-//    display: block;
-//    background: @gray;
-//    transform: rotate(-6deg) translate(-15px, 130px);
-//    position: absolute;
-//    top: 0;
-//    left: 0;
-//    height:40px;
-//    z-index: 1;
-//    
-//    @media screen and (min-width: @tablet_width) {
-//       height:80px;
-//       transform: rotate(-5deg)  translate(-15px, 160px);
-//    }
-//    
-//}
+.gradient::after {
+    content: '';
+    width: 105%;
+    display: block;
+    background: @gray;
+    transform: rotate(-6deg) translate(-15px, 130px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:200px;
+    z-index: 1;
+    
+    @media screen and (min-width: @tablet_width) {
+       transform: rotate(-5deg)  translate(-15px, 160px);
+    }
+    
+}
+
+.gradient--before::before {
+    content: '';
+    width: 105%;
+    display: block;
+    background: @gray;
+    transform: rotate(-6deg) translate(-15px, 130px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:200px;
+    z-index: 1;
+    
+    @media screen and (min-width: @tablet_width) {
+       transform: rotate(-5deg)  translate(-15px, 130px);
+    }
+    
+}
 
 .clearfix::after {
             content: "";

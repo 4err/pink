@@ -1,8 +1,8 @@
 .price {
     background: @gray;
     padding: 80px 0;
-    overflow: hidden;
-    
+    position: relative;
+    z-index: 10;
     &__icon {
         position: absolute;
         width: 30px;
@@ -25,6 +25,8 @@
     &__table {
         border-collapse: collapse;
         margin-left: -570px;
+            position: relative;
+    z-index: 10;
         
         & th:first-child{
             background: @gray;
