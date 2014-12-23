@@ -1,0 +1,11 @@
+{
+    "name" : "pink",
+    "dependencies" : {
+        "grunt": "*",
+        "grunt-contrib-less": "*",
+        "grunt-autoprefixer": "*",
+        "grunt-combine-media-queries": "*",
+        "grunt-csscomb": "*",
+        "grunt-contrib-cssmin": "*"        
+    }
+}

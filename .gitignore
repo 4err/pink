@@ -1,4 +1,7 @@
 prepros.cfg
+node_modules
+css
+npm-debug.log
 
 #################
 ## Eclipse
