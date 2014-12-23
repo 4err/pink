@@ -4,9 +4,10 @@
     left:0;
     right: 0;
     background: fadeout(@black, 60%);
+    
     &__menu_container {
-        padding: (20px/@mobile_width)*100%;
-        //background: fadeout(@black, 60%);
+        position: relative;
+        padding: (20px/@mobile_width)*100%;        
         
         @media screen and (min-width: @tablet_width) {
                padding: (30px/@tablet_width)*100%;
@@ -17,10 +18,14 @@
         }
         
     }
+    
     &__menu_container--menu_open {
-        background: @blue_menu;
-        border-bottom:1px solid @black;
+        @media screen and (max-width: @pc_width) {         
+            background: @blue_menu;
+            border-bottom:1px solid @black;
+        }
     }
+    
     &__logo {
         width: 75px;
         height: 25px;
@@ -37,25 +42,34 @@
               background: url("@{img_url}/Pink-logo-3@1x.png") 0 0 no-repeat;
         }
     }
+    
     &__main_menu_button {
+        position: absolute;
+        right: 20px;
         width: 50px;
         height: 25px;
         display: inline-block;
-        float: right;
         background: url("@{img_url}/menu-burger.svg") 0 0 no-repeat;
         
         @media screen and (min-width: @pc_width) {
                display: none;
         }
-    }
-    &__main_menu_button--close {
-        background: url("@{img_url}/menu-cross.svg") 0 0 no-repeat;
-        @media screen and (min-width: @pc_width) {
-               display: none;
+        
+        &--close {
+            width: 25px;
+            background: url("@{img_url}/menu-cross.svg") 0 0 no-repeat;
+        
+            @media screen and (min-width: @pc_width) {
+                   display: none;
+            }
         }
+        
+        transform: translateY(0);
+        transition: transform 1s ease;
     }
+    
     &__main_menu_button--hidden {
-        display: none;
+        transform: translateY(-200px);
     }
   
 }

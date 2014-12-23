@@ -5,7 +5,9 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    width: @mobile_width;
+    width: @mobile_width;   
+    transition: transform 1s ease;
+    transform: translateY(0);  
     
     @media screen and (min-width: @tablet_width) {
         width: @tablet_width;
@@ -56,8 +58,12 @@
     }
     
     &--hidden {
-        @media screen and (max-width: @pc_width) {
-               display: none;
+        opacity: 0;
+        transform: translateY(-600px);
+        @media screen and (min-width: @pc_width) {
+           opacity: 1;
+            transform: none;
         }
     }
+    
 }
