@@ -36,6 +36,14 @@
             font-size: @big_size + 3;
             font-weight: 700;
         }
+        
+        &:hover {
+            background: @white;
+            color: @pink;
+        }
+        &:active {
+            color: fadeout(@pink, 70);
+        }
     }    
     &__slogan {
         padding: 0px (30px/@mobile_width)*100%;

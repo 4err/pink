@@ -7,14 +7,6 @@
     justify-content: space-between;
     
     
-   &__logo{
-        color: black;
-        /*display: inline-block;
-        height: 40px;
-        width: 145px;*/
-        //background: url("@{img_url}/Pink-logo-footer-2@1x.png") 0 0 no-repeat;
-    }
-    
     &__icons_block {
         display: flex;
         align-content: center;        
@@ -38,6 +30,13 @@
         &--youtube {
             background: url("@{img_url}/youtube.svg") center center no-repeat;
         }
+        
+        &:hover {
+            border-color: @blue;
+        }
+        &:active {
+            opacity: .3;
+        }
     }
     
     &__copyright_block {
@@ -48,23 +47,25 @@
         vertical-align: top;
         
     }
-    
-    &__design_icon {
+    &__copyicon {
         display: inline-block;
         margin: 0 5px;
         width: 30px;
         height: 35px;
-        background: url("@{img_url}/glukhanko.svg") 0 0 no-repeat;
-    }
+        
+        &--design {
+            background: url("@{img_url}/glukhanko.svg") 0 0 no-repeat;
+        }
     
-    &__ha_icon {
-        display: inline-block;
-        margin: 0 5px;
-        width: 30px;
-        height: 35px;
-        background: url("@{img_url}/htmlacademy.svg") 0 0 no-repeat;
+        &--ha {
+            background: url("@{img_url}/htmlacademy.svg") 0 0 no-repeat;
+        }
+        
+        &:active {
+            opacity: .3;
+        }
     }
-    
+
 
     @media screen and (max-width: @tablet_width ) {
             display: none;
